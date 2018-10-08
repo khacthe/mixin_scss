@@ -1,6 +1,7 @@
 
+==========================Mixin.scss===================
 
-// keyframes mixin
+/*---- keyframes mixin---*/
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
@@ -20,7 +21,7 @@
   }
 }
 
-// animation mixin
+/*---- animation mixin ---*/
 
 @mixin animation($value) {
   -webkit-animation: $value;
@@ -30,7 +31,7 @@
   animation: $value;
 }
 
-// border-radius mixin
+/*---- border-radius mixin ---*/
 
 @mixin border-radius($radius) {
    -webkit-border-radius: $radius;
@@ -39,7 +40,7 @@
    border-radius: $radius;
 }
 
-// clearfix mixin
+/*---- clearfix mixin ---*/
 
 @mixin clearfix {
   clear: both;
@@ -47,7 +48,7 @@
   display: block;
 }
 
-// mixin transform
+/*---- mixin transform ---*/
 
 @mixin transform($property) {
   -webkit-transform: $property;
@@ -56,7 +57,7 @@
   transform: $property;
 }
 
-// pseudo mixin
+/*---- pseudo mixin ---*/
 
 @mixin pseudo($display: block, $pos: absolute, $content: ""){
   content: $content;
@@ -65,9 +66,9 @@
 }
 
 
-// triangles mixin
+/*---- triangles mixin ---*/
 
-@mixin css-triangle($color, $direction, $size: 10px, $position: absolute, $round: false){
+@mixin triangle($color, $direction, $size: 10px, $position: absolute, $round: false){
   @include pseudo($pos: $position);
   width: 0;
   height: 0;
@@ -98,7 +99,7 @@
 }
 
 
-// Placeholders mixin
+/*---- Placeholders mixin ---*/
 
 @mixin input-placeholder {
   &.placeholder { @content; }
@@ -108,7 +109,7 @@
   &::-webkit-input-placeholder { @content; }
 }
 
-// Media breakpoints mixin
+/*---- Media breakpoints mixin ---*/
 
 $breakpoints: (
   "phone":        400px,
@@ -132,7 +133,7 @@ $breakpoints: (
   }
 }
 
-// center mixin
+/*---- center mixin ---*/
 
 @mixin center($position) {
   position: absolute;
@@ -157,6 +158,8 @@ $breakpoints: (
     transform: translate(-50%, -50%);
   }
 }
+
+/*---- Convert px to rem with font-size 16px ---*/
 
 @function convertRem($size) {
   $remSize: $size / 16px;
